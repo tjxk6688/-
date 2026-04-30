@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职业卫生智能检索系统 - 科研测试版</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+        }
+        .header p {
+            color: #7f8c8d;
+        }
+        /* AI 聊天窗口会被 Web SDK 自动注入到页面右下角 */
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>基于多路由 RAG 的职业卫生智能检索系统</h1>
+        <p>本项目为科研测试应用 | 仅供行业专家内部测试</p>
+        <p>👇 请点击右下角的图标开始检索</p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 请把你从 Coze 复制的 Web SDK 代码粘贴在下方！ -->
+    <!-- ========================================== -->
+    
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7634339646956109866',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_********',
+      onRefreshToken: function () {
+        return 'pat_********'
+      }
+    }
+  });
+</script>
+    
+    <!-- ========================================== -->
+
+</body>
+</html>
